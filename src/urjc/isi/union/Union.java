@@ -18,9 +18,13 @@ public class Union {
 	 */
 	public static Vector union (Vector a, Vector b){
 		
-		Vector<Integer> vect = new Vector<Integer>();
-		vect.add((int) a.get(0));
-		vect.add((int) b.get(0));
+		Vector vect = new Vector();
+		for(Object e : a) {
+			vect.add(e);
+		}
+		for(Object e : b) {
+			vect.add(e);
+		}
 		return vect;
 	}
 }
