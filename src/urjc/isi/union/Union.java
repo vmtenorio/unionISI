@@ -1,3 +1,5 @@
+package urjc.isi.union;
+
 import java.util.*;
 
 public class Union {
