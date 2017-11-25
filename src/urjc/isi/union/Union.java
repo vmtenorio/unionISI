@@ -17,6 +17,10 @@ public class Union {
 	 * @throws	NullPointerException If a or b is null
 	 */
 	public static Vector union (Vector a, Vector b){
-		return null;
+		
+		Vector<Integer> vect = new Vector<Integer>();
+		vect.add((int) a.get(0));
+		vect.add((int) b.get(0));
+		return vect;
 	}
 }
