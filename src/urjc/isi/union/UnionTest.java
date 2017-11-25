@@ -77,5 +77,14 @@ public class UnionTest {
 		c.add(2);
 		assertTrue("Deja elementos repetidos", c.equals(Union.union(a, b)));
 	}
+	
+	@Test
+	public void testListaConNulls() {
+		a.add(null);
+		b.add(1);
+		c.add(null);
+		c.add(1);
+		assertTrue("No funciona con nulls en las listas", c.equals(Union.union(a, b)));
+	}
 
 }
