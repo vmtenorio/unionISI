@@ -38,5 +38,18 @@ public class UnionTest {
 		c.add(2);
 		assertTrue("Fallo al unir vectores", c.equals(Union.union(a, b)));
 	}
+	
+	@Test
+	public void testHappyPath2elems() {
+		a.add(1);
+		a.add(2);
+		b.add(3);
+		b.add(4);
+		c.add(1);
+		c.add(2);
+		c.add(3);
+		c.add(4);
+		assertTrue("Fallo al unir vectores", c.equals(Union.union(a, b)));
+	}
 
 }
