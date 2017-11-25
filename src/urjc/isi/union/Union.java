@@ -1,6 +1,7 @@
 package urjc.isi.union;
 
 import java.util.*;
+import java.lang.NullPointerException;
 
 public class Union {
 	
@@ -18,6 +19,9 @@ public class Union {
 	 */
 	public static Vector union (Vector a, Vector b){
 		
+		if (a == null || b == null) {
+			throw new NullPointerException();
+		}
 		Vector vect = new Vector();
 		for(Object e : a) {
 			vect.add(e);
