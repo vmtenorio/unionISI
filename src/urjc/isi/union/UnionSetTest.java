@@ -50,5 +50,10 @@ public class UnionSetTest {
 		c.add(4);
 		assertTrue("Fallo al unir sets con mas de un elemento", c.equals(Union.unionSet(a, b)));
 	}
+	
+	@Test
+	public void testListasVacias() {
+		assertTrue("Fallo al unir sets vacios", c.equals(Union.unionSet(a, b)));
+	}
 
 }
