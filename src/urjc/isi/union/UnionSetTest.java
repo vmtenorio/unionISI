@@ -92,5 +92,16 @@ public class UnionSetTest {
 		c.add('a');
 		assertTrue("No funciona con distintos tipos de datos", c.equals(Union.unionSet(a, b)));
 	}
+	
+	@Test
+	public void testDistintosTiposSet() {
+		Set a = new TreeSet();
+		Set c = new TreeSet();
+		a.add(1);
+		b.add(2);
+		c.add(1);
+		c.add(2);
+		assertTrue("No funciona con distintos tipos de sets", c.equals(Union.unionSet(a, b)));
+	}
 
 }
