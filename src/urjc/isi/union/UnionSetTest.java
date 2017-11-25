@@ -80,7 +80,7 @@ public class UnionSetTest {
 		b.add(null);
 		c.add(null);
 		c.add(1);
-		assertTrue("No funciona con nulls en las listas", c.equals(Union.union(a, b)));
+		assertTrue("No funciona con nulls en las listas", c.equals(Union.unionSet(a, b)));
 	}
 
 }
