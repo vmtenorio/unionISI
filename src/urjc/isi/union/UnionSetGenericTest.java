@@ -46,5 +46,11 @@ public class UnionSetGenericTest {
 	public void testListasVacias() {
 		assertTrue("Fallo al unir sets vacios", c.equals(Union.<Integer>unionSetGeneric(a, b)));
 	}
+	
+	@Test (expected = NullPointerException.class)
+	public void testListaNull() {
+		a = null;
+		Union.unionSet(a, b);
+	}
 
 }
