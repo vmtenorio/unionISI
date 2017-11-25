@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 import org.junit.After;
 import org.junit.Before;
@@ -71,6 +72,17 @@ public class UnionSetGenericTest {
 		c.add(null);
 		c.add(1);
 		assertTrue("No funciona con nulls en las listas", c.equals(Union.<Integer>unionSetGeneric(a, b)));
+	}
+	
+	@Test
+	public void testDistintosTiposSet() {
+		Set<Integer> a = new TreeSet<Integer>();
+		Set<Integer> c = new TreeSet<Integer>();
+		a.add(1);
+		b.add(2);
+		c.add(1);
+		c.add(2);
+		assertTrue("No funciona con distintos tipos de sets", c.equals(Union.<Integer>unionSetGeneric(a, b)));
 	}
 
 }
