@@ -61,9 +61,21 @@ public class UnionTest {
 	}
 	
 	@Test (expected = NullPointerException.class)
-	public void testListaNull () {
+	public void testListaNull() {
 		a = null;
 		Union.union(a, b);
+	}
+	
+	@Test
+	public void testElementosRepetidos() {
+		a.add(1);
+		a.add(1);
+		b.add(1);
+		b.add(1);
+		b.add(2);
+		c.add(1);
+		c.add(2);
+		assertTrue("Deja elementos repetidos", c.equals(Union.union(a, b)));
 	}
 
 }
