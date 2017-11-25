@@ -82,5 +82,15 @@ public class UnionSetTest {
 		c.add(1);
 		assertTrue("No funciona con nulls en las listas", c.equals(Union.unionSet(a, b)));
 	}
+	
+	@Test
+	public void testDistintosTiposDeDatos() {
+		a.add(1);
+		b.add('a');
+		a.add('a');
+		c.add(1);
+		c.add('a');
+		assertTrue("No funciona con distintos tipos de datos", c.equals(Union.unionSet(a, b)));
+	}
 
 }
