@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.*;
+import java.lang.NullPointerException;
 
 import urjc.isi.union.Union;
 
@@ -57,6 +58,12 @@ public class UnionTest {
 		b.add(1);
 		c.add(1);
 		assertTrue("Fallo al unir vectores con a vacio", c.equals(Union.union(a, b)));
+	}
+	
+	@Test (expected = NullPointerException.class)
+	public void testListaNull () {
+		a = null;
+		Union.union(a, b);
 	}
 
 }
