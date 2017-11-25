@@ -46,6 +46,13 @@ public class Union {
 	* @throws	NullPointerException If a or b is null
 	*/
 	public static Set unionSet (Set a, Set b) {
-		return null;
+		Set set = new HashSet();
+		for(Object e : a) {
+			set.add(e);
+		}
+		for(Object e : b) {
+			set.add(e);
+		}
+		return (Set) set;
 	}
 }
