@@ -62,5 +62,15 @@ public class UnionSetGenericTest {
 		c.add(2);
 		assertTrue("Deja elementos repetidos", c.equals(Union.<Integer>unionSetGeneric(a, b)));
 	}
+	
+	@Test
+	public void testListasConNulls() {
+		a.add(null);
+		b.add(1);
+		b.add(null);
+		c.add(null);
+		c.add(1);
+		assertTrue("No funciona con nulls en las listas", c.equals(Union.<Integer>unionSetGeneric(a, b)));
+	}
 
 }
