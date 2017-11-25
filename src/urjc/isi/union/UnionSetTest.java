@@ -61,5 +61,16 @@ public class UnionSetTest {
 		a = null;
 		Union.unionSet(a, b);
 	}
+	
+	@Test
+	public void testElementosRepetidos() {
+		a.add(1);
+		b.add(1);
+		b.add(2);
+		c.add(1);
+		c.add(2);
+		assertTrue("Deja elementos repetidos", c.equals(Union.unionSet(a, b)));
+		//Antes aquí hemos tenido que cambiar código, ahora no hace falta porque es un Set, ya funciona
+	}
 
 }
