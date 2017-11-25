@@ -50,7 +50,7 @@ public class UnionSetGenericTest {
 	@Test (expected = NullPointerException.class)
 	public void testListaNull() {
 		a = null;
-		Union.unionSet(a, b);
+		Union.<Integer>unionSetGeneric(a, b);
 	}
 	
 	@Test
@@ -60,7 +60,7 @@ public class UnionSetGenericTest {
 		b.add(2);
 		c.add(1);
 		c.add(2);
-		assertTrue("Deja elementos repetidos", c.equals(Union.unionSet(a, b)));
+		assertTrue("Deja elementos repetidos", c.equals(Union.<Integer>unionSetGeneric(a, b)));
 	}
 
 }
