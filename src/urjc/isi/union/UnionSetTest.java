@@ -34,8 +34,21 @@ public class UnionSetTest {
 		b.add(2);
 		c.add(1);
 		c.add(2);
-		assertTrue("Fallo al unir vectores", c.equals(Union.unionSet(a, b)));
+		assertTrue("Fallo al unir sets", c.equals(Union.unionSet(a, b)));
 		// No puedo hacer código que pruebe solo esto como antes, pues no hay get, por lo que continuo
+	}
+	
+	@Test
+	public void testHappyPath2elems() {
+		a.add(1);
+		a.add(2);
+		b.add(3);
+		b.add(4);
+		c.add(1);
+		c.add(2);
+		c.add(3);
+		c.add(4);
+		assertTrue("Fallo al unir sets con mas de un elemento", c.equals(Union.unionSet(a, b)));
 	}
 
 }
