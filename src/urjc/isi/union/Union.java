@@ -69,6 +69,9 @@ public class Union {
 	* @throws	NullPointerException If a or b is null
 	*/
 	public static <E> Set<E> unionSetGeneric (Set<? extends E> a, Set<? extends E> b){
+		if (a == null || b == null) {
+			throw new NullPointerException();
+		}
 		Set<E> set = new HashSet<E>();
 		for(Object e : a) {
 			set.add((E) e);
