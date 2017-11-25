@@ -30,7 +30,12 @@ public class UnionSetTest {
 
 	@Test
 	public void testHappyPath1elem() {
-		fail("Not yet implemented");
+		a.add(1);
+		b.add(2);
+		c.add(1);
+		c.add(2);
+		assertTrue("Fallo al unir vectores", c.equals(Union.unionSet(a, b)));
+		// No puedo hacer código que pruebe solo esto como antes, pues no hay get, por lo que continuo
 	}
 
 }
