@@ -24,10 +24,14 @@ public class Union {
 		}
 		Vector vect = new Vector();
 		for(Object e : a) {
-			vect.add(e);
+			if (!vect.contains(e)){
+				vect.add(e);
+			}
 		}
 		for(Object e : b) {
-			vect.add(e);
+			if (!vect.contains(e)){
+				vect.add(e);
+			}
 		}
 		return vect;
 	}
