@@ -13,15 +13,15 @@ import urjc.isi.union.Union;
 
 public class UnionTest {
 	
-	Vector<Integer> a;
-	Vector<Integer> b;
-	Vector<Integer> c;
+	Vector a;
+	Vector b;
+	Vector c;
 	
 	@Before
 	public void setUp() throws Exception {
-		a = new Vector<Integer>();
-		b = new Vector<Integer>();
-		c = new Vector<Integer>();
+		a = new Vector();
+		b = new Vector();
+		c = new Vector();
 	}
 
 	@After
