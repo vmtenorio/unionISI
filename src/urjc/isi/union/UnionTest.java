@@ -51,5 +51,12 @@ public class UnionTest {
 		c.add(4);
 		assertTrue("Fallo al unir vectores", c.equals(Union.union(a, b)));
 	}
+	
+	@Test
+	public void testUnaListaVacia() {
+		b.add(1);
+		c.add(1);
+		assertTrue("Fallo al unir vectores con a vacio", c.equals(Union.union(a, b)));
+	}
 
 }
